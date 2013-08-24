@@ -1,23 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Egr-rU-7Ef">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How far will you run for a beer?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3R-w0-9Qj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OfE-xe-s3O">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="nka-Ht-Yrw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MGR-KX-o7O">
+                                <connections>
+                                    <action selector="valueChanged:" destination="2" eventType="valueChanged" id="wHi-ha-hER"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3V-6f-wC2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="Q0f-Cr-u7d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="RUN">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="runPressed:" destination="2" eventType="touchUpInside" id="Lpx-Vj-ekl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="c3V-6f-wC2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Kw-m7-cpr"/>
+                            <constraint firstItem="OfE-xe-s3O" firstAttribute="top" secondItem="3" secondAttribute="top" constant="118" id="5Cf-bf-xCG"/>
+                            <constraint firstItem="OfE-xe-s3O" firstAttribute="centerX" secondItem="R3R-w0-9Qj" secondAttribute="centerX" type="default" id="F7z-0u-VFC"/>
+                            <constraint firstItem="c3V-6f-wC2" firstAttribute="top" secondItem="3" secondAttribute="top" constant="206" id="M5x-Uk-nNI"/>
+                            <constraint firstItem="MGR-KX-o7O" firstAttribute="centerX" secondItem="OfE-xe-s3O" secondAttribute="centerX" type="default" id="SIa-ew-nT8"/>
+                            <constraint firstItem="R3R-w0-9Qj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="66" id="Yut-gz-2Vw"/>
+                            <constraint firstItem="c3V-6f-wC2" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Yxi-Ug-LPe"/>
+                            <constraint firstItem="MGR-KX-o7O" firstAttribute="top" secondItem="OfE-xe-s3O" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dN5-hp-9iq"/>
+                            <constraint firstItem="MGR-KX-o7O" firstAttribute="centerX" secondItem="c3V-6f-wC2" secondAttribute="centerX" type="default" id="nYH-nA-AUb"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hcj-yp-7pH"/>
+                    <connections>
+                        <outlet property="mileRangeField" destination="OfE-xe-s3O" id="tvn-EC-qvS"/>
+                        <outlet property="runButton" destination="c3V-6f-wC2" id="hvA-u9-wuT"/>
+                        <outlet property="stepper" destination="MGR-KX-o7O" id="J7C-hH-kp4"/>
+                        <segue destination="IkY-Zb-LK4" kind="push" identifier="runSegue" id="QX0-V0-s7z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="586" y="139"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="rjE-J0-RKf">
+            <objects>
+                <viewController id="IkY-Zb-LK4" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bp-aq-hCI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PC3-kr-hEx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HK1-AO-C5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NAr-UB-qbj">
+            <objects>
+                <navigationController id="Egr-rU-7Ef" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="QeS-iR-oPu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="PPe-Ec-1ah"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAx-S1-fsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="139"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="runPressed:"/>
+                <relationship kind="action" name="valueChanged:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="mileRangeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="runButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stepper" candidateClass="UIStepper"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
