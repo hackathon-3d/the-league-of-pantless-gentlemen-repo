@@ -27,12 +27,6 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -43,9 +37,13 @@
     
 }
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self updateMapWithRoute];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     
-    [self updateMapWithRoute];
       
 }
 
@@ -100,5 +98,31 @@
     return overlayView;
 }
 
+#pragma mark - taxi section
+
+- (IBAction)taxiButtonPressed:(id)sender {
+
+    UIAlertView *alert = [[UIAlertView alloc] init];
+    [alert setTitle:@"Confirm Taxi"];
+    [alert setMessage:@"Are you really giving up and need a Taxi?"];
+    [alert setDelegate:self];
+    [alert addButtonWithTitle:@"Yes"];
+    [alert addButtonWithTitle:@"No"];
+    [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
+
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        // Yes, do something
+        [self performSegueWithIdentifier:@"taxiSegue" sender:self];
+    }
+    else if (buttonIndex == 1)
+    {
+        // No
+    }
+}
 
 @end

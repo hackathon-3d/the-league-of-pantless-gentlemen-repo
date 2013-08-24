@@ -12,7 +12,7 @@
 #import "GooglePlacesAPIClient.h"
 
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic) int mileRange;
 
