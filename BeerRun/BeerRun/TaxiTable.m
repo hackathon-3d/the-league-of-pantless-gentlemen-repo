@@ -50,26 +50,16 @@
     
     for (id key in json) {
         
-        if ([json objectForKey:@"results"] == @"results"){
+        if ([[key description] isEqualToString:@"results"]){
             NSDictionary *subDictionary = [json objectForKey:key];
             for(id key in subDictionary){
                 NSLog(@"Key: %@, Value %@", key, [json objectForKey: key]);
-                
+                [_taxiList addObject:[subDictionary valueForKey:@"name"]];
             }
         }
-        
-        
-        
-//        if ([subDictionary objectForKey:@"type"] == @"title")
-//            [titles addObject:[subDictionary objectForKey:@"title"]];
-//        // etc.
     }
     
-    //The results from Google will be an array obtained from the NSDictionary object with the key "results".
-    _taxiList = [[NSArray alloc] initWithArray:[json objectForKey:@"results"]];
-    
-    //Write out the data to the console.
-    //NSLog(@"Google Data: %@", _taxiList);
+
 }
 
 
