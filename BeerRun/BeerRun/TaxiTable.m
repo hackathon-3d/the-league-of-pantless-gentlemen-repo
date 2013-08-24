@@ -33,8 +33,6 @@
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData* data = [NSData dataWithContentsOfURL: googleRequestURL];
         [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
-        [_tableView reloadData];
-
     });
     
 }
@@ -52,13 +50,14 @@
         
         if ([[key description] isEqualToString:@"results"]){
             NSDictionary *subDictionary = [json objectForKey:key];
-            for(id key in subDictionary){
+            
                 NSLog(@"Key: %@, Value %@", key, [json objectForKey: key]);
-                [_taxiList addObject:[subDictionary valueForKey:@"name"]];
-            }
+            
+                _taxiList = [[NSArray alloc] initWithArray:[subDictionary valueForKey:@"name"]];
+            
         }
     }
-    
+    [_tableView reloadData];
 
 }
 
@@ -72,6 +71,8 @@
 {
     [super viewDidLoad];
 
+    [_tableView setDataSource:self];
+    [_tableView setDelegate:self];
     
     _locationManager = [(AppDelegate*)[UIApplication sharedApplication].delegate locationManager];
     
@@ -80,6 +81,10 @@
     currentLocation.longitude= _locationManager.location.coordinate.longitude;
     
     [self queryGooglePlaces:currentLocation withGoogleType:@"car_rental" andDistance:1000000];
+    
+
+    
+    [_tableView reloadData];
     
 }
 
@@ -93,16 +98,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return [_taxiList count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_taxiList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

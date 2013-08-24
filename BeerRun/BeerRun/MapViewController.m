@@ -60,28 +60,17 @@
     zoomLocation.latitude = _locationManager.location.coordinate.latitude;
     zoomLocation.longitude= _locationManager.location.coordinate.longitude;
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
-    
     GooglePlacesAPIClient *googleClient = [[GooglePlacesAPIClient alloc] init];
     GooglePlacesAPIClientRequest *request = [[GooglePlacesAPIClientRequest alloc] init];
     request.location = zoomLocation;
     request.distance = _mileRange;
 
-    request.callbackBlock = ^(GooglePlacesAPIClientResponse *response) { NSLog(@"Done: %i", response.distance); };
-    [googleClient queryGooglePlaces:request withGoogleType:@"bar"];
-     
-    /*
-    
-    //NSLog( [NSString stringWithFormat:@"%i", _mileRange ]);
+    request.callbackBlock = ^(GooglePlacesAPIClientResponse *response) {
+        
+        NSLog(@"Done: %i", response.distance);
+        
 
-    //TEMP TO GET ARRAY OF POINTS
-    _googleClient = [[GooglePlacesAPIClient alloc] init];
-    //[_googleClient queryGooglePlaces:zoomLocation withGoogleType:@"bar" andDistance: _mileRange * 1000];
-    
-
-    request.callbackBlock = ^(NSArray *response) {
-        NSLog(@"Done: %@", response);
-        //USING TEMP CREATE POINTS
-        _arrRoutePoints = [[NSArray alloc] initWithArray:response];
+        _arrRoutePoints = [[NSArray alloc] initWithArray:response.route];
         
         MKMapPoint * pointsArray = malloc(sizeof(CLLocationCoordinate2D)* [_arrRoutePoints count] );
         
@@ -98,66 +87,11 @@
         
         [[self mapView] addOverlay:_routeLine];
         [_mapView setRegion:viewRegion animated:YES];
-
+    
+    
     };
     [googleClient queryGooglePlaces:request withGoogleType:@"bar"];
      
-     
-//    CLLocationCoordinate2D puntitos[[response count]];
-//    
-//    int c = 0;
-//    
-//    for (CLLocation *cada in response)
-//    {
-//        puntitos[c] = CLLocationCoordinate2DMake(cada.coordinate.latitude, cada.coordinate.longitude);
-//        NSLog(@"%f,%f",cada.coordinate.latitude,cada.coordinate.longitude);
-//        c++;
-//    }
-//    
-//    
-//    self.routeLine = [MKPolyline polylineWithCoordinates: puntitos count:[response count]];
-//    [self.mapView addOverlay: self.routeLine];
-    
-    
-    //NSLog( [NSString stringWithFormat:@"%i", _mileRange ]);
-
-//    //TEMP TO GET ARRAY OF POINTS
-//    _googleClient = [[GooglePlacesAPIClient alloc] init];
-//    [_googleClient queryGooglePlaces:zoomLocation withGoogleType:@"bar" andDistance: _mileRange * 1000];
-//    
-//    
-//    CLLocation *loc1 = [[CLLocation alloc] initWithLatitude:_locationManager.location.coordinate.latitude longitude:_locationManager.location.coordinate.longitude];
-//    CLLocation *loc2 = [[CLLocation alloc] initWithLatitude:79.8456 longitude:32.8231];
-//    
-//    _arrRoutePoints = [[NSMutableArray alloc] init];
-//    
-//    [_arrRoutePoints addObject:loc1];
-//    [_arrRoutePoints addObject:loc2];
-
-    
-    
-
-    _arrRoutePoints = [[NSMutableArray alloc] init];
-    
-    [_arrRoutePoints addObject:loc1];
-    [_arrRoutePoints addObject:loc2];
-    
-    //USING TEMP CREATE POINTS
-    MKMapPoint * pointsArray = malloc(sizeof(CLLocationCoordinate2D)*2);
-    
-    int i = 0;
-    for(CLLocation *object in _arrRoutePoints){
-        pointsArray[i] = MKMapPointForCoordinate(object.coordinate);
-        i++;
-    }
-    
-    _routeLine = [MKPolyline polylineWithPoints:pointsArray count:i];
-    free(pointsArray);
-    
-    
-    [[self mapView] addOverlay:_routeLine];
-     */
-
 
 }
 
