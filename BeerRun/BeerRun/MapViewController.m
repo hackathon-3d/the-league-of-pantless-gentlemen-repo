@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "AppDelegate.h"
 
 @interface MapViewController ()
 
@@ -38,10 +39,17 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated{
     // 1
+    
+    CLLocationManager *locationManager = [(AppDelegate*)[UIApplication sharedApplication].delegate locationManager];
+    
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 39.281516;
-    zoomLocation.longitude= -76.580806;
+    zoomLocation.latitude = locationManager.location.coordinate.latitude;
+    zoomLocation.longitude= locationManager.location.coordinate.longitude;
     
     // 2
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);

@@ -12,9 +12,19 @@
 
 @implementation AppDelegate
 
+#pragma mark access to app delegate etc.
++ (AppDelegate*) sharedAppDelegate; {
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+    [_locationManager startUpdatingLocation];
+    
     return YES;
 }
 							
