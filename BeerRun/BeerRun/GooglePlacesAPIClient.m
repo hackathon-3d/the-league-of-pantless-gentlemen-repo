@@ -76,14 +76,14 @@ int _currentlyProcessingCount;
 }
 
 
--(void) queryGoogleDirections: (GoogleDirectionsAPIRequest *) directionsRequest :(GooglePlacesAPIClient *) placesRequest {
+-(void) queryGoogleDirections: (GoogleDirectionsAPIRequest *) directionsRequest :(GooglePlacesAPIClientRequest *) placesRequest {
     
     NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%f,%f&destination=%@&sensor=true&mode=walking",
                      directionsRequest.origin.latitude,
                      directionsRequest.origin.longitude,
                      directionsRequest.destination];
     
-    //NSLog(url);
+    NSLog(url);
     
     //Formulate the string as a URL object.
     NSURL *googleRequestURL=[NSURL URLWithString:url];
@@ -114,17 +114,26 @@ int _currentlyProcessingCount;
     
     if (routes != nil && [routes count] > 0) {
         for ( id leg in [[routes objectAtIndex:0] objectForKey:@"legs"] ) {
-            //NSLog(@"%@", leg);
-            
-            CLLocationCoordinate2D startCoordinate = CLLocationCoordinate2DMake([[[leg objectForKey:@"startLocation"] objectForKey:@"lat"] doubleValue], [[[leg objectForKey:@"startLocation"] objectForKey:@"lng"] doubleValue]);
-            CLLocationCoordinate2D endCoordinate = CLLocationCoordinate2DMake([[[leg objectForKey:@"endLocation"] objectForKey:@"lat"] doubleValue], [[[leg objectForKey:@"endLocation"] objectForKey:@"lng"] doubleValue]);
-            if ( ![request response] ) {
-                [request setResponse:[NSMutableArray array]];
+            int routeDistance = [[[leg objectForKey:@"distance"] objectForKey:@"value"] integerValue];
+            int routeDifference = abs((request.distance * kMETERS_PER_MILE) - routeDistance);
+            if ( [request response] == nil || abs((request.distance * kMETERS_PER_MILE) - [[request response] distance]) > routeDifference ) {
+                GooglePlacesAPIClientResponse *response = [[GooglePlacesAPIClientResponse alloc] init];
+                [response setDistance:routeDistance];
+                [response setRoute:[NSMutableArray array]];
+                for ( id step in [leg objectForKey:@"steps"] ) {
+                    CLLocationCoordinate2D startCoordinate = CLLocationCoordinate2DMake([[[step objectForKey:@"start_location"] objectForKey:@"lat"] doubleValue],
+                                                                                        [[[step objectForKey:@"start_location"] objectForKey:@"lng"] doubleValue]);
+                    CLLocationCoordinate2D endCoordinate = CLLocationCoordinate2DMake([[[step objectForKey:@"end_location"] objectForKey:@"lat"] doubleValue],
+                                                                                        [[[step objectForKey:@"end_location"] objectForKey:@"lng"] doubleValue]);
+                    CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:startCoordinate.latitude longitude:startCoordinate.longitude];
+                    CLLocation *endLocation = [[CLLocation alloc] initWithLatitude:endCoordinate.latitude longitude:endCoordinate.longitude];
+                    [[response route] addObject:startLocation];
+                    [[response route] addObject:endLocation];
+                }
+                
+                [request setResponse:response];
             }
-            CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:startCoordinate.latitude longitude:startCoordinate.longitude];
-            CLLocation *endLocation = [[CLLocation alloc] initWithLatitude:endCoordinate.latitude longitude:endCoordinate.longitude];
-            [[request response] addObject:startLocation];
-            [[request response] addObject:endLocation];
+            
         }
     }
         

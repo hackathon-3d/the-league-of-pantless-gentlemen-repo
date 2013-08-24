@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "GooglePlacesAPIClient.h"
 #import "GooglePlacesAPIClientRequest.h"
+#import "GooglePlacesAPIClientResponse.h"
 
 
 @interface MapViewController ()
@@ -61,25 +62,24 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     [_mapView setRegion:viewRegion animated:YES];
     
-    /*
+    
      
-     Michael Test Code
      
      
     GooglePlacesAPIClient *googleClient = [[GooglePlacesAPIClient alloc] init];
     GooglePlacesAPIClientRequest *request = [[GooglePlacesAPIClientRequest alloc] init];
     request.location = zoomLocation;
     request.distance = _mileRange;
-    request.callbackBlock = ^(NSArray *response) { NSLog(@"Done: %@", response); };
+    request.callbackBlock = ^(GooglePlacesAPIClientResponse *response) { NSLog(@"Done: %i", response.distance); };
     [googleClient queryGooglePlaces:request withGoogleType:@"bar"];
      
-     */
+    /*
     
     //NSLog( [NSString stringWithFormat:@"%i", _mileRange ]);
 
     //TEMP TO GET ARRAY OF POINTS
     _googleClient = [[GooglePlacesAPIClient alloc] init];
-    [_googleClient queryGooglePlaces:zoomLocation withGoogleType:@"bar" andDistance: _mileRange * 1000];
+    //[_googleClient queryGooglePlaces:zoomLocation withGoogleType:@"bar" andDistance: _mileRange * 1000];
     
     
     CLLocation *loc1 = [[CLLocation alloc] initWithLatitude:_locationManager.location.coordinate.latitude longitude:_locationManager.location.coordinate.longitude];
@@ -104,6 +104,7 @@
     
     
     [[self mapView] addOverlay:_routeLine];
+     */
 
 }
 

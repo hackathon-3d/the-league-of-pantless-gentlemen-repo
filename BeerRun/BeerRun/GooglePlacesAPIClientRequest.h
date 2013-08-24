@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "GooglePlacesAPIClientResponse.h"
 
 
-typedef void(^CallbackBlock)(NSArray *);
+typedef void(^CallbackBlock)(GooglePlacesAPIClientResponse *);
 
 @interface GooglePlacesAPIClientRequest : NSObject
 
 @property(nonatomic) CLLocationCoordinate2D location;
 @property(nonatomic) NSInteger distance;
-@property(nonatomic, strong) NSMutableArray *response;
+@property(nonatomic, strong) GooglePlacesAPIClientResponse *response;
 @property(nonatomic, copy) CallbackBlock callbackBlock;
 
 
