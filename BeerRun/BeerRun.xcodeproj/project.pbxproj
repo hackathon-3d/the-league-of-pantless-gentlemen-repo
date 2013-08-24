@@ -28,6 +28,18 @@
 		985053FA17C84BE3009347D5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985053F817C84BE3009347D5 /* MainStoryboard.storyboard */; };
 		985053FD17C84BE4009347D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985053FC17C84BE4009347D5 /* ViewController.m */; };
 		987EAFC717C9042100E56E1F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987EAFC617C9042100E56E1F /* MediaPlayer.framework */; };
+		987EAFCF17C90D6300E56E1F /* beerrun-mainpage-btn-add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFC817C90D6200E56E1F /* beerrun-mainpage-btn-add@2x.png */; };
+		987EAFD017C90D6300E56E1F /* beerrun-mainpage-btn-delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFC917C90D6200E56E1F /* beerrun-mainpage-btn-delete@2x.png */; };
+		987EAFD117C90D6300E56E1F /* beerrun-mainpage-How-far-are-you-running@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFCA17C90D6200E56E1F /* beerrun-mainpage-How-far-are-you-running@2x.png */; };
+		987EAFD217C90D6300E56E1F /* beerrun-mainpage-main-page-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFCB17C90D6200E56E1F /* beerrun-mainpage-main-page-bg@2x.png */; };
+		987EAFD317C90D6300E56E1F /* beerrun-mainpage-number-field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFCC17C90D6300E56E1F /* beerrun-mainpage-number-field@2x.png */; };
+		987EAFD417C90D6300E56E1F /* beerrun-mainpage-play-button-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFCD17C90D6300E56E1F /* beerrun-mainpage-play-button-down@2x.png */; };
+		987EAFD517C90D6300E56E1F /* beerrun-mainpage-play-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFCE17C90D6300E56E1F /* beerrun-mainpage-play-button@2x.png */; };
+		987EAFD817C9103900E56E1F /* beerrun-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFD617C9103900E56E1F /* beerrun-logo@2x.png */; };
+		987EAFD917C9103900E56E1F /* beerrun-splash-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFD717C9103900E56E1F /* beerrun-splash-bg@2x.png */; };
+		987EAFDD17C9115400E56E1F /* beerrun-music-play-music-button-(pressed).png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFDA17C9115300E56E1F /* beerrun-music-play-music-button-(pressed).png */; };
+		987EAFDE17C9115400E56E1F /* beerrun-music-play-music-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFDB17C9115300E56E1F /* beerrun-music-play-music-button.png */; };
+		987EAFDF17C9115400E56E1F /* beerrun-text-Play-some-tunes,-brah!.png in Resources */ = {isa = PBXBuildFile; fileRef = 987EAFDC17C9115300E56E1F /* beerrun-text-Play-some-tunes,-brah!.png */; };
 		9888AFB817C85CBB0015D557 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9888AFB717C85CBB0015D557 /* MapViewController.m */; };
 		9888AFBB17C85F4A0015D557 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888AFB917C85F4A0015D557 /* CoreLocation.framework */; };
 		9888AFBC17C85F4A0015D557 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888AFBA17C85F4A0015D557 /* MapKit.framework */; };
@@ -66,6 +78,18 @@
 		985053FB17C84BE3009347D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		985053FC17C84BE4009347D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		987EAFC617C9042100E56E1F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		987EAFC817C90D6200E56E1F /* beerrun-mainpage-btn-add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-mainpage-btn-add@2x.png"; sourceTree = "<group>"; };
+		987EAFC917C90D6200E56E1F /* beerrun-mainpage-btn-delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-mainpage-btn-delete@2x.png"; sourceTree = "<group>"; };
+		987EAFCA17C90D6200E56E1F /* beerrun-mainpage-How-far-are-you-running@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-mainpage-How-far-are-you-running@2x.png"; sourceTree = "<group>"; };
+		987EAFCB17C90D6200E56E1F /* beerrun-mainpage-main-page-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-mainpage-main-page-bg@2x.png"; sourceTree = "<group>"; };
+		987EAFCC17C90D6300E56E1F /* beerrun-mainpage-number-field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-mainpage-number-field@2x.png"; sourceTree = "<group>"; };
+		987EAFCD17C90D6300E56E1F /* beerrun-mainpage-play-button-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-mainpage-play-button-down@2x.png"; sourceTree = "<group>"; };
+		987EAFCE17C90D6300E56E1F /* beerrun-mainpage-play-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-mainpage-play-button@2x.png"; sourceTree = "<group>"; };
+		987EAFD617C9103900E56E1F /* beerrun-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-logo@2x.png"; sourceTree = "<group>"; };
+		987EAFD717C9103900E56E1F /* beerrun-splash-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-splash-bg@2x.png"; sourceTree = "<group>"; };
+		987EAFDA17C9115300E56E1F /* beerrun-music-play-music-button-(pressed).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-music-play-music-button-(pressed).png"; sourceTree = "<group>"; };
+		987EAFDB17C9115300E56E1F /* beerrun-music-play-music-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-music-play-music-button.png"; sourceTree = "<group>"; };
+		987EAFDC17C9115300E56E1F /* beerrun-text-Play-some-tunes,-brah!.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beerrun-text-Play-some-tunes,-brah!.png"; sourceTree = "<group>"; };
 		9888AFB617C85CBB0015D557 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9888AFB717C85CBB0015D557 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9888AFB917C85F4A0015D557 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -122,6 +146,18 @@
 		985053E617C84BE3009347D5 /* BeerRun */ = {
 			isa = PBXGroup;
 			children = (
+				987EAFDA17C9115300E56E1F /* beerrun-music-play-music-button-(pressed).png */,
+				987EAFDB17C9115300E56E1F /* beerrun-music-play-music-button.png */,
+				987EAFDC17C9115300E56E1F /* beerrun-text-Play-some-tunes,-brah!.png */,
+				987EAFD617C9103900E56E1F /* beerrun-logo@2x.png */,
+				987EAFD717C9103900E56E1F /* beerrun-splash-bg@2x.png */,
+				987EAFC817C90D6200E56E1F /* beerrun-mainpage-btn-add@2x.png */,
+				987EAFC917C90D6200E56E1F /* beerrun-mainpage-btn-delete@2x.png */,
+				987EAFCA17C90D6200E56E1F /* beerrun-mainpage-How-far-are-you-running@2x.png */,
+				987EAFCB17C90D6200E56E1F /* beerrun-mainpage-main-page-bg@2x.png */,
+				987EAFCC17C90D6300E56E1F /* beerrun-mainpage-number-field@2x.png */,
+				987EAFCD17C90D6300E56E1F /* beerrun-mainpage-play-button-down@2x.png */,
+				987EAFCE17C90D6300E56E1F /* beerrun-mainpage-play-button@2x.png */,
 				2D1B08DF17C869CF00CD2774 /* Default.png */,
 				2D1B08DD17C867F400CD2774 /* Default-568h@2x.png */,
 				2D1B08D917C866AE00CD2774 /* Default@2x.png */,
@@ -222,6 +258,18 @@
 				2D1B08DA17C866AE00CD2774 /* Default@2x.png in Resources */,
 				2D1B08DE17C867F400CD2774 /* Default-568h@2x.png in Resources */,
 				2D1B08E017C869CF00CD2774 /* Default.png in Resources */,
+				987EAFCF17C90D6300E56E1F /* beerrun-mainpage-btn-add@2x.png in Resources */,
+				987EAFD017C90D6300E56E1F /* beerrun-mainpage-btn-delete@2x.png in Resources */,
+				987EAFD117C90D6300E56E1F /* beerrun-mainpage-How-far-are-you-running@2x.png in Resources */,
+				987EAFD217C90D6300E56E1F /* beerrun-mainpage-main-page-bg@2x.png in Resources */,
+				987EAFD317C90D6300E56E1F /* beerrun-mainpage-number-field@2x.png in Resources */,
+				987EAFD417C90D6300E56E1F /* beerrun-mainpage-play-button-down@2x.png in Resources */,
+				987EAFD517C90D6300E56E1F /* beerrun-mainpage-play-button@2x.png in Resources */,
+				987EAFD817C9103900E56E1F /* beerrun-logo@2x.png in Resources */,
+				987EAFD917C9103900E56E1F /* beerrun-splash-bg@2x.png in Resources */,
+				987EAFDD17C9115400E56E1F /* beerrun-music-play-music-button-(pressed).png in Resources */,
+				987EAFDE17C9115400E56E1F /* beerrun-music-play-music-button.png in Resources */,
+				987EAFDF17C9115400E56E1F /* beerrun-text-Play-some-tunes,-brah!.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "GooglePlacesAPIClient.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate, MKAnnotation>
