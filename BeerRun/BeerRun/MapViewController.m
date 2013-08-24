@@ -147,7 +147,47 @@
     if (buttonIndex == 0)
     {
         // Yes, do something
-        [self performSegueWithIdentifier:@"taxiSegue" sender:self];
+        //[self performSegueWithIdentifier:@"taxiSegue" sender:self];
+        
+        CLLocationCoordinate2D zoomLocation;
+        zoomLocation.latitude = _locationManager.location.coordinate.latitude;
+        zoomLocation.longitude= _locationManager.location.coordinate.longitude;
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+        MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+        request.naturalLanguageQuery = @"Taxi";
+        request.region = viewRegion;
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
+        
+        [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error){
+            
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            
+            if (error != nil) {
+                [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Map Error",nil)
+                                            message:[error localizedDescription]
+                                           delegate:nil
+                                  cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil] show];
+                return;
+            }
+            
+            if ([response.mapItems count] == 0) {
+                [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Results",nil)
+                                            message:nil
+                                           delegate:nil
+                                  cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil] show];
+                return;
+            }
+            
+            NSArray *mapItemsArray = response.mapItems;
+            NSDictionary *dictForDirections = @{MKLaunchOptionsMapTypeKey: [NSNumber numberWithInt:1], MKLaunchOptionsMapTypeKey: @2};
+            
+            [MKMapItem openMapsWithItems:mapItemsArray launchOptions:dictForDirections];
+            
+            //[self.searchDisplayController.searchResultsTableView reloadData];
+        }];
+        
     }
     else if (buttonIndex == 1)
     {

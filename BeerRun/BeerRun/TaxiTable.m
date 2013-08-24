@@ -82,8 +82,6 @@
     
     [self queryGooglePlaces:currentLocation withGoogleType:@"car_rental" andDistance:1000000];
     
-
-    
     [_tableView reloadData];
     
 }
