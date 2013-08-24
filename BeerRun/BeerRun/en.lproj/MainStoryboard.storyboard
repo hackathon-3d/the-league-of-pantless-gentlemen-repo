@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" placeholder="0" textAlignment="center" minimumFontSize="17" background="beerrun-mainpage-number-field@2x.png" id="OfE-xe-s3O">
-                                <rect key="frame" x="112" y="105" width="97" height="30"/>
+                                <rect key="frame" x="112" y="89" width="97" height="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="route"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9VJ-QR-2wg">
-                                <rect key="frame" x="168" y="140" width="67" height="71"/>
+                                <rect key="frame" x="168" y="127" width="67" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Button" image="beerrun-mainpage-btn-add@2x.png">
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zcc-nb-5uN">
-                                <rect key="frame" x="98" y="150" width="48" height="52"/>
+                                <rect key="frame" x="98" y="135" width="48" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="beerrun-mainpage-btn-delete@2x.png">
@@ -70,8 +70,8 @@
                                     <action selector="minusButtonPressed:" destination="2" eventType="touchUpInside" id="gpB-V5-CKp"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="beerrun-mainpage-How-far-are-you-running@2x.png" id="JY7-Qs-yqV">
-                                <rect key="frame" x="20" y="73" width="280" height="24"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="beerrun-mainpage-How-far-are-you-running@2x.png" id="JY7-Qs-yqV">
+                                <rect key="frame" x="66" y="62" width="189" height="14"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
