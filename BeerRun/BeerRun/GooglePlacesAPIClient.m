@@ -131,7 +131,10 @@ int _currentlyProcessingCount;
                     [[response route] addObject:endLocation];
                 }
                 
-                [request setResponse:response];
+                if ([response route] != nil && [[response route] count] > 0) {
+                    [request setResponse:response];
+                }
+            
             }
             
         }

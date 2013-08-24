@@ -21,11 +21,14 @@
 
 @implementation MapViewController
 
+UIAlertView *_alert;
+UIActivityIndicatorView *_progress;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -43,7 +46,12 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self updateMapWithRoute];
-    
+    _alert = [[UIAlertView alloc] initWithTitle: @"Loading..." message: nil delegate:self cancelButtonTitle: nil otherButtonTitles: nil];
+    _progress = [[UIActivityIndicatorView alloc] initWithFrame: CGRectMake(125, 50, 30, 30)];
+    _progress.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    [_alert addSubview: _progress];
+    [_progress startAnimating];
+    [_alert show];
     if(_callTimer)
     {
         [_callTimer invalidate];
@@ -63,7 +71,6 @@
 
 -(void)updateMapWithRoute
 {
-    
     
     _locationManager = [(AppDelegate*)[UIApplication sharedApplication].delegate locationManager];
     
@@ -144,7 +151,8 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 0)
+    
+    if ( buttonIndex == 0 && ![[alertView title] isEqualToString:@"No Route Found"] )
     {
         // Yes, do something
         //[self performSegueWithIdentifier:@"taxiSegue" sender:self];
@@ -197,34 +205,53 @@
 
 - (void)centerMap
 {
-    MKCoordinateRegion region;
-    
-    CLLocationDegrees maxLat = -90;
-    CLLocationDegrees maxLon = -180;
-    CLLocationDegrees minLat = 90;
-    CLLocationDegrees minLon = 180;
-    
-    for(int idx = 0; idx < _arrRoutePoints.count; idx++)
-    {
-        CLLocation* currentLocation = [_arrRoutePoints objectAtIndex:idx];
+    [_alert dismissWithClickedButtonIndex:1 animated:YES];
+    if ( _arrRoutePoints.count == 0 ) {
+        _alert = [[UIAlertView alloc] initWithTitle: @"No Route Found" message: @"Could not find a suitable route. Please try again." delegate:self cancelButtonTitle: @"OK" otherButtonTitles: nil];
+        //progress= [[UIActivityIndicatorView alloc] initWithFrame: CGRectMake(125, 50, 30, 30)];
+        //progress.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        //[alert addSubview: progress];
+        //[progress startAnimating];
+        [_alert show];
         
-        if(currentLocation.coordinate.latitude > maxLat)
-            maxLat = currentLocation.coordinate.latitude;
-        if(currentLocation.coordinate.latitude < minLat)
-            minLat = currentLocation.coordinate.latitude;
-        if(currentLocation.coordinate.longitude > maxLon)
-            maxLon = currentLocation.coordinate.longitude;
-        if(currentLocation.coordinate.longitude < minLon)
-            minLon = currentLocation.coordinate.longitude;
+    } else {
+    
+        MKCoordinateRegion region;
+    
+        CLLocationDegrees maxLat = -90;
+        CLLocationDegrees maxLon = -180;
+        CLLocationDegrees minLat = 90;
+        CLLocationDegrees minLon = 180;
+    
+        for(int idx = 0; idx < _arrRoutePoints.count; idx++)
+        {
+            CLLocation* currentLocation = [_arrRoutePoints objectAtIndex:idx];
+        
+            if(currentLocation.coordinate.latitude > maxLat)
+                maxLat = currentLocation.coordinate.latitude;
+            if(currentLocation.coordinate.latitude < minLat)
+                minLat = currentLocation.coordinate.latitude;
+            if(currentLocation.coordinate.longitude > maxLon)
+                maxLon = currentLocation.coordinate.longitude;
+            if(currentLocation.coordinate.longitude < minLon)
+                minLon = currentLocation.coordinate.longitude;
+    
+        
+        }
+    
+        NSLog(@"%i", _arrRoutePoints.count);
+    
+        region.center.latitude     = (maxLat + minLat) / 2;
+        region.center.longitude    = (maxLon + minLon) / 2;
+        region.span.latitudeDelta  = maxLat - minLat + 0.03;
+        region.span.longitudeDelta = maxLon - minLon + 0.03;
+    
+    
+    
+        [_mapView setRegion:region animated:YES];
+        [self performSegueWithIdentifier:@"test" sender:self];
     }
     
-    region.center.latitude     = (maxLat + minLat) / 2;
-    region.center.longitude    = (maxLon + minLon) / 2;
-    region.span.latitudeDelta  = maxLat - minLat + 0.03;
-    region.span.longitudeDelta = maxLon - minLon + 0.03;
-    
-    [_mapView setRegion:region animated:YES];
-    [self performSegueWithIdentifier:@"test" sender:self];
 }
 
 @end
