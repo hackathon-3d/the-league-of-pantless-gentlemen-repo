@@ -180,8 +180,8 @@
     
     region.center.latitude     = (maxLat + minLat) / 2;
     region.center.longitude    = (maxLon + minLon) / 2;
-    region.span.latitudeDelta  = maxLat - minLat;
-    region.span.longitudeDelta = maxLon - minLon;
+    region.span.latitudeDelta  = maxLat - minLat + 0.03;
+    region.span.longitudeDelta = maxLon - minLon + 0.03;
     
     [_mapView setRegion:region animated:YES];
     [self performSegueWithIdentifier:@"test" sender:self];
