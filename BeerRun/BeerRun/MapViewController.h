@@ -12,13 +12,13 @@
 #import "GooglePlacesAPIClient.h"
 
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic) int mileRange;
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (strong, nonatomic) NSMutableArray *arrRoutePoints;
+@property (strong, nonatomic) NSArray *arrRoutePoints;
 @property (strong, nonatomic) MKPolyline *objPolyline;
 
 @property (strong, nonatomic) GooglePlacesAPIClient *googleClient;
