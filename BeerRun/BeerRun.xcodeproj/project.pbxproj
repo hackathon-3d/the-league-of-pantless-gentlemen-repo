@@ -27,6 +27,7 @@
 		985053F717C84BE3009347D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985053F617C84BE3009347D5 /* Default-568h@2x.png */; };
 		985053FA17C84BE3009347D5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985053F817C84BE3009347D5 /* MainStoryboard.storyboard */; };
 		985053FD17C84BE4009347D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985053FC17C84BE4009347D5 /* ViewController.m */; };
+		987EAFC717C9042100E56E1F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987EAFC617C9042100E56E1F /* MediaPlayer.framework */; };
 		9888AFB817C85CBB0015D557 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9888AFB717C85CBB0015D557 /* MapViewController.m */; };
 		9888AFBB17C85F4A0015D557 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888AFB917C85F4A0015D557 /* CoreLocation.framework */; };
 		9888AFBC17C85F4A0015D557 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888AFBA17C85F4A0015D557 /* MapKit.framework */; };
@@ -64,6 +65,7 @@
 		985053F917C84BE3009347D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		985053FB17C84BE3009347D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		985053FC17C84BE4009347D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		987EAFC617C9042100E56E1F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9888AFB617C85CBB0015D557 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9888AFB717C85CBB0015D557 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9888AFB917C85F4A0015D557 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987EAFC717C9042100E56E1F /* MediaPlayer.framework in Frameworks */,
 				9888AFBB17C85F4A0015D557 /* CoreLocation.framework in Frameworks */,
 				9888AFBC17C85F4A0015D557 /* MapKit.framework in Frameworks */,
 				985053E117C84BE3009347D5 /* UIKit.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		985053DF17C84BE3009347D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				987EAFC617C9042100E56E1F /* MediaPlayer.framework */,
 				9888AFB917C85F4A0015D557 /* CoreLocation.framework */,
 				9888AFBA17C85F4A0015D557 /* MapKit.framework */,
 				985053E017C84BE3009347D5 /* UIKit.framework */,

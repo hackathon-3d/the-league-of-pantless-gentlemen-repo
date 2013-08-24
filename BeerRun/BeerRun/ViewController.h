@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIStepper *stepper;
 @property (strong, nonatomic) IBOutlet UITextField *mileRangeField;
 @property (strong, nonatomic) IBOutlet UIButton *runButton;
+@property (strong, nonatomic) IBOutlet UILabel *someLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *someImageView;
 
 @end
