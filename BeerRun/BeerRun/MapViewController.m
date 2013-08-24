@@ -43,11 +43,22 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self updateMapWithRoute];
+    
+    if(_callTimer)
+    {
+        [_callTimer invalidate];
+        _callTimer=nil;
+    }
+    _callTimer=[NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(centerMap) userInfo:nil repeats:NO];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    
+    //[self updateMapWithRoute];
       
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    //[_mapView removeOverlay:_routeLine];
 }
 
 -(void)updateMapWithRoute
@@ -87,6 +98,9 @@
         
         [[self mapView] addOverlay:_routeLine];
         [_mapView setRegion:viewRegion animated:YES];
+        //[self performSegueWithIdentifier:@"test" sender:self];
+        
+        
     
     
     };
@@ -132,6 +146,38 @@
     {
         // No
     }
+}
+
+- (void)centerMap
+{
+    MKCoordinateRegion region;
+    
+    CLLocationDegrees maxLat = -90;
+    CLLocationDegrees maxLon = -180;
+    CLLocationDegrees minLat = 90;
+    CLLocationDegrees minLon = 180;
+    
+    for(int idx = 0; idx < _arrRoutePoints.count; idx++)
+    {
+        CLLocation* currentLocation = [_arrRoutePoints objectAtIndex:idx];
+        
+        if(currentLocation.coordinate.latitude > maxLat)
+            maxLat = currentLocation.coordinate.latitude;
+        if(currentLocation.coordinate.latitude < minLat)
+            minLat = currentLocation.coordinate.latitude;
+        if(currentLocation.coordinate.longitude > maxLon)
+            maxLon = currentLocation.coordinate.longitude;
+        if(currentLocation.coordinate.longitude < minLon)
+            minLon = currentLocation.coordinate.longitude;
+    }
+    
+    region.center.latitude     = (maxLat + minLat) / 2;
+    region.center.longitude    = (maxLon + minLon) / 2;
+    region.span.latitudeDelta  = maxLat - minLat;
+    region.span.longitudeDelta = maxLon - minLon;
+    
+    [_mapView setRegion:region animated:YES];
+    [self performSegueWithIdentifier:@"test" sender:self];
 }
 
 @end

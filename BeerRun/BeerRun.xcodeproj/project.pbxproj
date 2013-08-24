@@ -13,11 +13,9 @@
 		2D1B08E317C877D200CD2774 /* GooglePlacesAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E217C877D200CD2774 /* GooglePlacesAPIClient.m */; };
 		2D1B08E617C898EC00CD2774 /* GooglePlacesAPIClientRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */; };
 		2D1B08E917C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */; };
-
 		2D1B08EC17C8BB5B00CD2774 /* GooglePlacesAPIClientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08EB17C8BB5B00CD2774 /* GooglePlacesAPIClientResponse.m */; };
-
 		981058A317C8BC110096D4EE /* TaxiTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 981058A117C8BC110096D4EE /* TaxiTable.m */; };
-
+		981058A617C8D9440096D4EE /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981058A517C8D9440096D4EE /* TestViewController.m */; };
 		985053E117C84BE3009347D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E017C84BE3009347D5 /* UIKit.framework */; };
 		985053E317C84BE3009347D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E217C84BE3009347D5 /* Foundation.framework */; };
 		985053E517C84BE3009347D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E417C84BE3009347D5 /* CoreGraphics.framework */; };
@@ -44,13 +42,12 @@
 		2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesAPIClientRequest.m; sourceTree = "<group>"; };
 		2D1B08E717C8AC0800CD2774 /* GoogleDirectionsAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDirectionsAPIRequest.h; sourceTree = "<group>"; };
 		2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDirectionsAPIRequest.m; sourceTree = "<group>"; };
-
 		2D1B08EA17C8BB5B00CD2774 /* GooglePlacesAPIClientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesAPIClientResponse.h; sourceTree = "<group>"; };
 		2D1B08EB17C8BB5B00CD2774 /* GooglePlacesAPIClientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesAPIClientResponse.m; sourceTree = "<group>"; };
-
 		981058A117C8BC110096D4EE /* TaxiTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiTable.m; sourceTree = "<group>"; };
 		981058A217C8BC110096D4EE /* TaxiTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiTable.h; sourceTree = "<group>"; };
-
+		981058A417C8D9430096D4EE /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		981058A517C8D9440096D4EE /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		985053DD17C84BE3009347D5 /* BeerRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985053E017C84BE3009347D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		985053E217C84BE3009347D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,13 +135,12 @@
 				2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */,
 				2D1B08E717C8AC0800CD2774 /* GoogleDirectionsAPIRequest.h */,
 				2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */,
-
 				2D1B08EA17C8BB5B00CD2774 /* GooglePlacesAPIClientResponse.h */,
 				2D1B08EB17C8BB5B00CD2774 /* GooglePlacesAPIClientResponse.m */,
-
 				981058A117C8BC110096D4EE /* TaxiTable.m */,
 				981058A217C8BC110096D4EE /* TaxiTable.h */,
-
+				981058A417C8D9430096D4EE /* TestViewController.h */,
+				981058A517C8D9440096D4EE /* TestViewController.m */,
 			);
 			path = BeerRun;
 			sourceTree = "<group>";
@@ -239,11 +235,9 @@
 				2D1B08E317C877D200CD2774 /* GooglePlacesAPIClient.m in Sources */,
 				2D1B08E617C898EC00CD2774 /* GooglePlacesAPIClientRequest.m in Sources */,
 				2D1B08E917C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m in Sources */,
-
 				2D1B08EC17C8BB5B00CD2774 /* GooglePlacesAPIClientResponse.m in Sources */,
-
 				981058A317C8BC110096D4EE /* TaxiTable.m in Sources */,
-
+				981058A617C8D9440096D4EE /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

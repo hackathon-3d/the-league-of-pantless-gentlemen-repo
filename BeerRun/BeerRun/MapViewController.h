@@ -29,5 +29,7 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, readwrite) MKMapRect routeRect;
 
+@property (nonatomic, strong) NSTimer *callTimer;
+
 
 @end
