@@ -18,6 +18,7 @@
 		985053F717C84BE3009347D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985053F617C84BE3009347D5 /* Default-568h@2x.png */; };
 		985053FA17C84BE3009347D5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985053F817C84BE3009347D5 /* MainStoryboard.storyboard */; };
 		985053FD17C84BE4009347D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985053FC17C84BE4009347D5 /* ViewController.m */; };
+		9888AFB817C85CBB0015D557 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9888AFB717C85CBB0015D557 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		985053F917C84BE3009347D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		985053FB17C84BE3009347D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		985053FC17C84BE4009347D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9888AFB617C85CBB0015D557 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		9888AFB717C85CBB0015D557 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				985053FB17C84BE3009347D5 /* ViewController.h */,
 				985053FC17C84BE4009347D5 /* ViewController.m */,
 				985053E717C84BE3009347D5 /* Supporting Files */,
+				9888AFB617C85CBB0015D557 /* MapViewController.h */,
+				9888AFB717C85CBB0015D557 /* MapViewController.m */,
 			);
 			path = BeerRun;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				985053ED17C84BE3009347D5 /* main.m in Sources */,
 				985053F117C84BE3009347D5 /* AppDelegate.m in Sources */,
 				985053FD17C84BE4009347D5 /* ViewController.m in Sources */,
+				9888AFB817C85CBB0015D557 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +219,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -228,6 +235,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -244,6 +253,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -252,6 +262,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -298,6 +310,7 @@
 				9850540217C84BE4009347D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
