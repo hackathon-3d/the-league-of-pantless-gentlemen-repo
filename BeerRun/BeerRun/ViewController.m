@@ -33,6 +33,25 @@
     
     [_mileRangeField setText:[NSString stringWithFormat:@"%d", (int)value]];
 }
+
+
+
+- (IBAction)minusButtonPressed:(id)sender {
+    
+    double value = [[_mileRangeField text] intValue];
+    
+    if(value >= 1)
+        [_mileRangeField setText:[NSString stringWithFormat:@"%d", (int)value - 1]];
+}
+
+- (IBAction)plusButtonPressed:(id)sender {
+    double value = [[_mileRangeField text] intValue];
+    
+    [_mileRangeField setText:[NSString stringWithFormat:@"%d", (int)value + 1]];
+}
+
+
+
 - (IBAction)runPressed:(id)sender {
     [self performSegueWithIdentifier:@"runSegue" sender:self];
 }

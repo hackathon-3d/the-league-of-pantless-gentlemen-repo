@@ -61,20 +61,51 @@
                                     <action selector="musicButton:" destination="2" eventType="touchUpInside" id="zYq-UX-dc7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VJ-QR-2wg">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="plusButtonPressed:" destination="2" eventType="touchUpInside" id="LRl-Xi-3e5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcc-nb-5uN">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="minusButtonPressed:" destination="2" eventType="touchUpInside" id="gpB-V5-CKp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Zcc-nb-5uN" firstAttribute="top" secondItem="9VJ-QR-2wg" secondAttribute="top" type="default" id="18q-pB-wJd"/>
                             <constraint firstAttribute="trailing" secondItem="c3V-6f-wC2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Kw-m7-cpr"/>
                             <constraint firstItem="OfE-xe-s3O" firstAttribute="top" secondItem="3" secondAttribute="top" constant="118" id="5Cf-bf-xCG"/>
+                            <constraint firstItem="MGR-KX-o7O" firstAttribute="leading" secondItem="Zcc-nb-5uN" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9b0-69-iNN"/>
                             <constraint firstItem="ZPN-LH-cLf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="15" id="COt-lD-L8D"/>
                             <constraint firstItem="OfE-xe-s3O" firstAttribute="centerX" secondItem="R3R-w0-9Qj" secondAttribute="centerX" type="default" id="F7z-0u-VFC"/>
                             <constraint firstItem="MGR-KX-o7O" firstAttribute="centerX" secondItem="OfE-xe-s3O" secondAttribute="centerX" type="default" id="SIa-ew-nT8"/>
                             <constraint firstItem="c3V-6f-wC2" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Yxi-Ug-LPe"/>
                             <constraint firstItem="MGR-KX-o7O" firstAttribute="top" secondItem="OfE-xe-s3O" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dN5-hp-9iq"/>
+                            <constraint firstItem="Zcc-nb-5uN" firstAttribute="bottom" secondItem="MGR-KX-o7O" secondAttribute="bottom" type="default" id="edt-pA-2cj"/>
                             <constraint firstItem="R3R-w0-9Qj" firstAttribute="top" secondItem="ZPN-LH-cLf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fZd-gm-W97"/>
                             <constraint firstItem="ZPN-LH-cLf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="36" id="fan-bY-SaN"/>
+                            <constraint firstItem="Zcc-nb-5uN" firstAttribute="baseline" secondItem="9VJ-QR-2wg" secondAttribute="baseline" type="default" id="jKC-33-FBk"/>
                             <constraint firstItem="c3V-6f-wC2" firstAttribute="top" secondItem="3" secondAttribute="top" constant="206" id="miE-Id-VEM"/>
                             <constraint firstItem="MGR-KX-o7O" firstAttribute="centerX" secondItem="c3V-6f-wC2" secondAttribute="centerX" type="default" id="nYH-nA-AUb"/>
+                            <constraint firstAttribute="trailing" secondItem="9VJ-QR-2wg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="viU-WR-R6S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hcj-yp-7pH"/>
@@ -229,6 +260,43 @@
             <point key="canvasLocation" x="60" y="139"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="taxiButtonPressed:"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TaxiTable" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaxiTable.h"/>
+            <relationships>
+                <relationship kind="action" name="escape:"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="TestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestViewController.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="minusButtonPressed:"/>
+                <relationship kind="action" name="musicButton:"/>
+                <relationship kind="action" name="plusButtonPressed:"/>
+                <relationship kind="action" name="runPressed:"/>
+                <relationship kind="action" name="valueChanged:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="mileRangeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="runButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="someImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="someLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stepper" candidateClass="UIStepper"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
