@@ -226,5 +226,27 @@
     [_mapView setRegion:region animated:YES];
     [self performSegueWithIdentifier:@"test" sender:self];
 }
+- (IBAction)randomSong:(id)sender {
+    //Create an instance of MPMusicPlayerController
+    MPMusicPlayerController* myPlayer = [MPMusicPlayerController applicationMusicPlayer];
+
+    //Create a query that will return all songs by The Beatles grouped by album
+    //[query addFilterPredicate:[MPMediaPropertyPredicate predicateWithValue:@"The Beatles" forProperty:MPMediaItemPropertyArtist comparisonType:MPMediaPredicateComparisonEqualTo]];
+    //[query setGroupingType:MPMediaGroupingAlbum];
+
+
+    MPMediaQuery* query = [MPMediaQuery songsQuery];
+    NSArray *songs = [query items];
+    MPMediaItem *randomTrack = [songs objectAtIndex:arc4random_uniform([songs count])];
+
+
+    //Pass the query to the player
+    [myPlayer setQueueWithQuery:query];
+    [myPlayer setShuffleMode:MPMusicShuffleModeAlbums];
+    //Start playing and set a label text to the name and image to the cover art of the song that is playing
+    [myPlayer play];
+    //_someLabel.text = [myPlayer.nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
+    //_someImageView.image = [myPlayer.nowPlayingItem valueForProperty:MPMediaItemPropertyArtwork];
+}
 
 @end
