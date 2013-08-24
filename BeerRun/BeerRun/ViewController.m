@@ -40,5 +40,14 @@
     [(MapViewController *)[segue destinationViewController] setMileRange:[[_mileRangeField text] intValue]];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    [self performSegueWithIdentifier:@"runSegue" sender:self];
+    return YES;
+}
+
+
+
 
 @end
