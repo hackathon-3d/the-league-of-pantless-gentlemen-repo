@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1B08DA17C866AE00CD2774 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B08D917C866AE00CD2774 /* Default@2x.png */; };
+		2D1B08DE17C867F400CD2774 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B08DD17C867F400CD2774 /* Default-568h@2x.png */; };
+		2D1B08E017C869CF00CD2774 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B08DF17C869CF00CD2774 /* Default.png */; };
 		985053E117C84BE3009347D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E017C84BE3009347D5 /* UIKit.framework */; };
 		985053E317C84BE3009347D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E217C84BE3009347D5 /* Foundation.framework */; };
 		985053E517C84BE3009347D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E417C84BE3009347D5 /* CoreGraphics.framework */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1B08D917C866AE00CD2774 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2D1B08DD17C867F400CD2774 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2D1B08DF17C869CF00CD2774 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		985053DD17C84BE3009347D5 /* BeerRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985053E017C84BE3009347D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		985053E217C84BE3009347D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +71,7 @@
 		985053D417C84BE3009347D5 = {
 			isa = PBXGroup;
 			children = (
+				2D1B08DF17C869CF00CD2774 /* Default.png */,
 				985053E617C84BE3009347D5 /* BeerRun */,
 				985053DF17C84BE3009347D5 /* Frameworks */,
 				985053DE17C84BE3009347D5 /* Products */,
@@ -94,6 +101,8 @@
 		985053E617C84BE3009347D5 /* BeerRun */ = {
 			isa = PBXGroup;
 			children = (
+				2D1B08DD17C867F400CD2774 /* Default-568h@2x.png */,
+				2D1B08D917C866AE00CD2774 /* Default@2x.png */,
 				985053EF17C84BE3009347D5 /* AppDelegate.h */,
 				985053F017C84BE3009347D5 /* AppDelegate.m */,
 				985053F817C84BE3009347D5 /* MainStoryboard.storyboard */,
@@ -176,6 +185,9 @@
 				985053F517C84BE3009347D5 /* Default@2x.png in Resources */,
 				985053F717C84BE3009347D5 /* Default-568h@2x.png in Resources */,
 				985053FA17C84BE3009347D5 /* MainStoryboard.storyboard in Resources */,
+				2D1B08DA17C866AE00CD2774 /* Default@2x.png in Resources */,
+				2D1B08DE17C867F400CD2774 /* Default-568h@2x.png in Resources */,
+				2D1B08E017C869CF00CD2774 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
