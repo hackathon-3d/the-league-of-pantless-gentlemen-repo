@@ -11,6 +11,8 @@
 		2D1B08DE17C867F400CD2774 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B08DD17C867F400CD2774 /* Default-568h@2x.png */; };
 		2D1B08E017C869CF00CD2774 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B08DF17C869CF00CD2774 /* Default.png */; };
 		2D1B08E317C877D200CD2774 /* GooglePlacesAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E217C877D200CD2774 /* GooglePlacesAPIClient.m */; };
+		2D1B08E617C898EC00CD2774 /* GooglePlacesAPIClientRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */; };
+		2D1B08E917C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */; };
 		985053E117C84BE3009347D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E017C84BE3009347D5 /* UIKit.framework */; };
 		985053E317C84BE3009347D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E217C84BE3009347D5 /* Foundation.framework */; };
 		985053E517C84BE3009347D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E417C84BE3009347D5 /* CoreGraphics.framework */; };
@@ -22,7 +24,6 @@
 		985053F717C84BE3009347D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985053F617C84BE3009347D5 /* Default-568h@2x.png */; };
 		985053FA17C84BE3009347D5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985053F817C84BE3009347D5 /* MainStoryboard.storyboard */; };
 		985053FD17C84BE4009347D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985053FC17C84BE4009347D5 /* ViewController.m */; };
-		987C14BD17C8A9D80087A91D /* TaxiTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 987C14BC17C8A9D80087A91D /* TaxiTable.m */; };
 		9888AFB817C85CBB0015D557 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9888AFB717C85CBB0015D557 /* MapViewController.m */; };
 		9888AFBB17C85F4A0015D557 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888AFB917C85F4A0015D557 /* CoreLocation.framework */; };
 		9888AFBC17C85F4A0015D557 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9888AFBA17C85F4A0015D557 /* MapKit.framework */; };
@@ -34,6 +35,10 @@
 		2D1B08DF17C869CF00CD2774 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		2D1B08E117C877D200CD2774 /* GooglePlacesAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesAPIClient.h; sourceTree = "<group>"; };
 		2D1B08E217C877D200CD2774 /* GooglePlacesAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesAPIClient.m; sourceTree = "<group>"; };
+		2D1B08E417C898EC00CD2774 /* GooglePlacesAPIClientRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesAPIClientRequest.h; sourceTree = "<group>"; };
+		2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesAPIClientRequest.m; sourceTree = "<group>"; };
+		2D1B08E717C8AC0800CD2774 /* GoogleDirectionsAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDirectionsAPIRequest.h; sourceTree = "<group>"; };
+		2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDirectionsAPIRequest.m; sourceTree = "<group>"; };
 		985053DD17C84BE3009347D5 /* BeerRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985053E017C84BE3009347D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		985053E217C84BE3009347D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +55,6 @@
 		985053F917C84BE3009347D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		985053FB17C84BE3009347D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		985053FC17C84BE4009347D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		987C14BB17C8A9D80087A91D /* TaxiTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiTable.h; sourceTree = "<group>"; };
-		987C14BC17C8A9D80087A91D /* TaxiTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiTable.m; sourceTree = "<group>"; };
 		9888AFB617C85CBB0015D557 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9888AFB717C85CBB0015D557 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9888AFB917C85F4A0015D557 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -119,8 +122,10 @@
 				9888AFB717C85CBB0015D557 /* MapViewController.m */,
 				2D1B08E117C877D200CD2774 /* GooglePlacesAPIClient.h */,
 				2D1B08E217C877D200CD2774 /* GooglePlacesAPIClient.m */,
-				987C14BB17C8A9D80087A91D /* TaxiTable.h */,
-				987C14BC17C8A9D80087A91D /* TaxiTable.m */,
+				2D1B08E417C898EC00CD2774 /* GooglePlacesAPIClientRequest.h */,
+				2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */,
+				2D1B08E717C8AC0800CD2774 /* GoogleDirectionsAPIRequest.h */,
+				2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */,
 			);
 			path = BeerRun;
 			sourceTree = "<group>";
@@ -213,7 +218,8 @@
 				985053FD17C84BE4009347D5 /* ViewController.m in Sources */,
 				9888AFB817C85CBB0015D557 /* MapViewController.m in Sources */,
 				2D1B08E317C877D200CD2774 /* GooglePlacesAPIClient.m in Sources */,
-				987C14BD17C8A9D80087A91D /* TaxiTable.m in Sources */,
+				2D1B08E617C898EC00CD2774 /* GooglePlacesAPIClientRequest.m in Sources */,
+				2D1B08E917C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
