@@ -8,6 +8,8 @@
 
 #import "MapViewController.h"
 #import "AppDelegate.h"
+#import "GooglePlacesAPIClient.h"
+#import "GooglePlacesAPIClientRequest.h"
 
 @interface MapViewController ()
 
@@ -56,6 +58,13 @@
     
     // 3
     [_mapView setRegion:viewRegion animated:YES];
+    
+    GooglePlacesAPIClient *googleClient = [[GooglePlacesAPIClient alloc] init];
+    GooglePlacesAPIClientRequest *request = [[GooglePlacesAPIClientRequest alloc] init];
+    request.location = zoomLocation;
+    request.distance = _mileRange;
+    request.callbackBlock = ^(NSArray *response) { NSLog(@"Done: %@", response); };
+    [googleClient queryGooglePlaces:request withGoogleType:@"bar"];
     
     //NSLog( [NSString stringWithFormat:@"%i", _mileRange ]);
 }

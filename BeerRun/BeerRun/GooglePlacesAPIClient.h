@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "GooglePlacesAPIClientRequest.h"
+
 
 @interface GooglePlacesAPIClient : NSObject
 
--(void) queryGooglePlaces: (CLLocationCoordinate2D) currentLocation withGoogleType: (NSString *) googleType andDistance: (NSInteger) radius;
+-(void) queryGooglePlaces: (GooglePlacesAPIClientRequest *) request  withGoogleType: (NSString *) googleType;
 
 @end

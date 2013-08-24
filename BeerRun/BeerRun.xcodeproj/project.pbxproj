@@ -11,6 +11,8 @@
 		2D1B08DE17C867F400CD2774 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B08DD17C867F400CD2774 /* Default-568h@2x.png */; };
 		2D1B08E017C869CF00CD2774 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B08DF17C869CF00CD2774 /* Default.png */; };
 		2D1B08E317C877D200CD2774 /* GooglePlacesAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E217C877D200CD2774 /* GooglePlacesAPIClient.m */; };
+		2D1B08E617C898EC00CD2774 /* GooglePlacesAPIClientRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */; };
+		2D1B08E917C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */; };
 		985053E117C84BE3009347D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E017C84BE3009347D5 /* UIKit.framework */; };
 		985053E317C84BE3009347D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E217C84BE3009347D5 /* Foundation.framework */; };
 		985053E517C84BE3009347D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985053E417C84BE3009347D5 /* CoreGraphics.framework */; };
@@ -33,6 +35,10 @@
 		2D1B08DF17C869CF00CD2774 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		2D1B08E117C877D200CD2774 /* GooglePlacesAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesAPIClient.h; sourceTree = "<group>"; };
 		2D1B08E217C877D200CD2774 /* GooglePlacesAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesAPIClient.m; sourceTree = "<group>"; };
+		2D1B08E417C898EC00CD2774 /* GooglePlacesAPIClientRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesAPIClientRequest.h; sourceTree = "<group>"; };
+		2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesAPIClientRequest.m; sourceTree = "<group>"; };
+		2D1B08E717C8AC0800CD2774 /* GoogleDirectionsAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDirectionsAPIRequest.h; sourceTree = "<group>"; };
+		2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDirectionsAPIRequest.m; sourceTree = "<group>"; };
 		985053DD17C84BE3009347D5 /* BeerRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985053E017C84BE3009347D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		985053E217C84BE3009347D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +122,10 @@
 				9888AFB717C85CBB0015D557 /* MapViewController.m */,
 				2D1B08E117C877D200CD2774 /* GooglePlacesAPIClient.h */,
 				2D1B08E217C877D200CD2774 /* GooglePlacesAPIClient.m */,
+				2D1B08E417C898EC00CD2774 /* GooglePlacesAPIClientRequest.h */,
+				2D1B08E517C898EC00CD2774 /* GooglePlacesAPIClientRequest.m */,
+				2D1B08E717C8AC0800CD2774 /* GoogleDirectionsAPIRequest.h */,
+				2D1B08E817C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m */,
 			);
 			path = BeerRun;
 			sourceTree = "<group>";
@@ -208,6 +218,8 @@
 				985053FD17C84BE4009347D5 /* ViewController.m in Sources */,
 				9888AFB817C85CBB0015D557 /* MapViewController.m in Sources */,
 				2D1B08E317C877D200CD2774 /* GooglePlacesAPIClient.m in Sources */,
+				2D1B08E617C898EC00CD2774 /* GooglePlacesAPIClientRequest.m in Sources */,
+				2D1B08E917C8AC0800CD2774 /* GoogleDirectionsAPIRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
