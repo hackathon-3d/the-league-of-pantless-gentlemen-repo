@@ -56,6 +56,8 @@
     
     // 3
     [_mapView setRegion:viewRegion animated:YES];
+    
+    //NSLog( [NSString stringWithFormat:@"%i", _mileRange ]);
 }
 
 @end
