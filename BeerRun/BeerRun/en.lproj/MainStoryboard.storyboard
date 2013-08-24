@@ -136,8 +136,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4kV-US-zuJ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="92L-zn-W5c" id="wOl-8M-WWd"/>
-                                    <outlet property="delegate" destination="92L-zn-W5c" id="Ao6-Hz-B7E"/>
+                                    <outlet property="dataSource" destination="92L-zn-W5c" id="X6C-aV-fjy"/>
+                                    <outlet property="delegate" destination="92L-zn-W5c" id="QVY-ax-Xzc"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -153,7 +153,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="4kV-US-zuJ" id="fNY-hx-VYK"/>
+                        <outlet property="tableView" destination="4kV-US-zuJ" id="KL5-ca-jXY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXw-0U-91a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,7 +184,6 @@
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
             <relationships>
-                <relationship kind="action" name="taxiButtonPressed:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
