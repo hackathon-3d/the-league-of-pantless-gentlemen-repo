@@ -79,7 +79,6 @@
     request.callbackBlock = ^(GooglePlacesAPIClientResponse *response) {
         
         NSLog(@"Done: %i", response.distance);
-        
 
         _arrRoutePoints = [[NSArray alloc] initWithArray:response.route];
         
@@ -95,6 +94,14 @@
         _routeLine = [MKPolyline polylineWithPoints:pointsArray count:i];
         free(pointsArray);
         
+        //add an anotation at the destination
+        // Add an annotation
+        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+        point.coordinate = [[_arrRoutePoints objectAtIndex:_arrRoutePoints.count -1] coordinate];
+        point.title = response.barName;
+        point.subtitle = @"Beer.";
+        
+        [self.mapView addAnnotation:point];
         
         [[self mapView] addOverlay:_routeLine];
         [_mapView setRegion:viewRegion animated:YES];
